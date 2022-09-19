@@ -1,5 +1,6 @@
 <script lang="ts">
-  import PostLayout, { type PostData } from '$lib/PostLayout.svelte'
+  import type { PostData } from '$/types'
+  import PostLayout from '$lib/PostLayout.svelte'
   
   export let data: any
 

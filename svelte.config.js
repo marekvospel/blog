@@ -9,7 +9,10 @@ const config = {
      for more information about preprocessors */
   preprocess: [
     preprocess(),
-    mdsvex({ extensions: ['.md'] }),
+    mdsvex({
+      extensions: ['.md'],
+      smartypants: { quotes: false },
+    }),
   ],
 
   kit: {
