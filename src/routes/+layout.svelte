@@ -8,7 +8,7 @@
     initialLocale: 'en',
   })
 
-  export async function preload(_, session) {
+  export async function preload(_: any, session: any): Promise<void> {
     await waitLocale(session.locale)
   }
 </script>
