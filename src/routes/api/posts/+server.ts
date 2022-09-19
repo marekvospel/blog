@@ -20,6 +20,8 @@ export const GET: RequestHandler = async () => {
     })
   )
 
+  allPosts.sort((a: any, b: any) => new Date(b?.created ?? Infinity).getTime() - new Date(a?.created ?? 0).getTime())
+
   return json(allPosts)
 }
 
