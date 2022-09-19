@@ -38,23 +38,23 @@
     @apply max-w-[100ch] w-[100%] mx-auto;
   }
   .markdown :global(h1) {
-    @apply text-3xl font-extrabold border-b-2 border-opacity-75 border-dark-400 mb-2 pb-1;
+    @apply text-3xl font-extrabold border-b-2 border-opacity-75 border-dark-400 mt-6 mb-4 pb-1;
   }
 
   .markdown :global(h2) {
-    @apply text-2xl font-extrabold;
+    @apply text-2xl font-extrabold mt-4 mb-2;
   }
 
   .markdown :global(h3) {
-    @apply text-xl font-bold;
+    @apply text-xl font-bold mt-4 mb-2;
   }
 
   .markdown :global(h4) {
-    @apply text-lg font-bold;
+    @apply text-lg font-bold mt-4 mb-2;
   }
 
   .markdown :global(h5) {
-    @apply font-semibold;
+    @apply font-semibold mt-4 my-2;
   }
 
   .markdown :global(code) {
@@ -67,5 +67,9 @@
 
   .markdown :global(pre > code) {
     @apply block w-[100%] my-1;
+  }
+
+  .markdown :global(strong) {
+    @apply font-extrabold;
   }
 </style>

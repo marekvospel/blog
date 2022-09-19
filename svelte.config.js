@@ -2,6 +2,10 @@ import adapter from '@sveltejs/adapter-static'
 import preprocess from 'svelte-preprocess'
 import { mdsvex } from 'mdsvex'
 
+import rehypeKatexSvelte from 'rehype-katex-svelte'
+import remarkGfm from 'remark-gfm'
+import remarkMath from 'remark-math'
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   extensions: ['.svelte', '.md'],
@@ -11,7 +15,17 @@ const config = {
     preprocess(),
     mdsvex({
       extensions: ['.md'],
-      smartypants: { quotes: false },
+      smartypants: {
+        quotes: false,
+        backticks: 'all',
+      },
+      rehypePlugins: [
+        rehypeKatexSvelte,
+      ],
+      remarkPlugins: [
+        remarkGfm,
+        remarkMath,
+      ],
     }),
   ],
 

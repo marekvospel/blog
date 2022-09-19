@@ -5,7 +5,7 @@
   export let data: any
 
   let post: PostData
-  $: post = Object.values(data).find((p: any) => p.path === '/hello') as PostData
+  $: post = Object.values(data).find((p: any) => p.path === '/intro-into-cybersecurity') as PostData
 </script>
 
 <PostLayout {...post}>
