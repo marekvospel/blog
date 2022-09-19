@@ -13,4 +13,4 @@ export const load: LayoutServerLoad = async ({ cookies }) => {
   return { locale: cookies.get('locale') ?? 'en' }
 }
 
-export const prerender = true
+export const ssr = true
