@@ -22,3 +22,5 @@ export const GET: RequestHandler = async () => {
 
   return json(allPosts)
 }
+
+export const prerender = true

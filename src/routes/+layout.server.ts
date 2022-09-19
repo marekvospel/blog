@@ -7,3 +7,5 @@ export const load: LayoutServerLoad = async ({ request }) => {
   
   return result.ok ? (await result.json()) : {}
 }
+
+export const prerender = true
