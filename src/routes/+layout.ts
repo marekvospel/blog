@@ -1,11 +1,13 @@
 import '$modules/unocss'
-import { init, register } from 'svelte-i18n'
+import type { LayoutLoad } from './$types'
+import { initI18n, registerLocales } from '$/modules/i18n'
 
-register('en', () => import('$locale/en.json'))
+import { waitLocale } from 'svelte-i18n'
 
-init({
-  fallbackLocale: 'en',
-  initialLocale: 'en',
-})
+export const load: LayoutLoad = async ({ data }) => {
+  registerLocales()
 
-export const prerender = true
+  initI18n(data.locale)
+
+  await waitLocale(data.locale)
+}
