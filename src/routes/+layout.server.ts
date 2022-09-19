@@ -1,16 +1,9 @@
-// import { initI18n } from '$/modules/i18n'
 import type { LayoutServerLoad } from './$types'
 
-import { locales } from '$modules/i18n'
-
-export const load: LayoutServerLoad = async ({ cookies }) => {
-  if (!cookies.get('locale')) cookies.set('locale', 'en')
-
-  if (!locales.includes(cookies.get('locale') ?? '')) {
-    cookies.set('locale', 'en')
-  }
+export const load: LayoutServerLoad = async ({ request }) => {
+  const url = new URL(request.url)
+  url.pathname = '/api/posts'
+  const result = await fetch(url.toString())
   
-  return { locale: cookies.get('locale') ?? 'en' }
+  return result.ok ? (await result.json()) : {}
 }
-
-export const ssr = true
