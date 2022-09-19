@@ -1,2 +1,2 @@
-* marekvospel
-src/routes/api/posts/+server.ts danbulant marekvospel
+* @marekvospel
+src/routes/api/posts/+server.ts @danbulant @marekvospel
