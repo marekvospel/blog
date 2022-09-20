@@ -36,7 +36,6 @@ export const GET: RequestHandler = async ({ request }) => {
           <description>${p.description}</description>
           <link>https://blog.vospel.cz${p.path}</link>
           <pubDate>${new Date(p.created).toUTCString()}</pubDate>
-          <updated>${new Date(p.updated).toUTCString()}</updated>
           <guid>${p.path}</guid>
         </item>
       `).join('\n')}
