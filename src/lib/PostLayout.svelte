@@ -19,7 +19,7 @@
   <meta name="description" content={description}>
 </svelte:head>
 
-<article itemscope itemtype="http://schema.org/Article" class="markdown">
+<article itemscope itemtype="http://schema.org/Article" class="markdown mb-8">
   {#if created}
     <meta itemprop="datePublished" content={created}/>
   {/if}
