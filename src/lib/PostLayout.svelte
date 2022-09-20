@@ -27,6 +27,7 @@
     <meta itemprop="dateModified" content={updated}/>
   {/if}
   <meta itemprop="publisher" content="vospel.cz" />
+  <span><a href="/" class="text-cyan-400 hover:text-cyan-200 transition-colors duration-300">Blog</a> <span class="text-dark-50">/</span></span>
   <slot />
   {#if author?.name}
     <span itemprop="author" itemtype="http://schema.org/Person" class="hidden">
@@ -41,7 +42,7 @@
     @apply max-w-[100ch] w-[100%] mx-auto;
   }
   .markdown :global(h1) {
-    @apply text-3xl font-extrabold border-b-2 border-opacity-75 border-dark-400 mt-6 mb-4 pb-1;
+    @apply text-3xl font-extrabold border-b-2 border-opacity-75 border-dark-400 mt-2 mb-4 pb-1;
   }
 
   .markdown :global(h2) {
