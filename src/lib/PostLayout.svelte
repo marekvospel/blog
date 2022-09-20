@@ -1,4 +1,6 @@
 <script>
+  import NavBar from '$lib/NavBar.svelte'
+
   /** @type string | undefined*/
   export let title
   /** @type string | undefined*/
@@ -21,7 +23,8 @@
   <meta name="og:description" content={description}>
 </svelte:head>
 
-<article itemscope itemtype="http://schema.org/Article" class="markdown mb-8">
+<NavBar />
+<article itemscope itemtype="http://schema.org/Article" class="markdown mb-8" id="content">
   {#if created}
     <meta itemprop="datePublished" content={created}/>
   {/if}

@@ -1,5 +1,6 @@
 <script lang="ts">
   import ListPost from '$/lib/ListPost.svelte'
+  import NavBar from '$/lib/NavBar.svelte'
   import type { PostData } from '$/types'
 
   export let data: any
@@ -14,9 +15,11 @@
   <meta name="og:description" content="Cybersecurity and web development related blog">
 </svelte:head>
 
+<NavBar />
 <div
   itemscope itemtype="https://schema.org/Blog"
   class="flex flex-col gap-4 px-4 py-2"
+  id="content"
 >
   {#each posts as post}
     <ListPost {...post} />

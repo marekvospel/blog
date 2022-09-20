@@ -9,6 +9,7 @@
   <meta property="og:url" content="https://blog.vospel.cz/">
 </svelte:head>
 
+<a href="#content" class="absolute px-4 py-2 bg-dark-200 translate-x-[-100%] focus:translate-0">Jump to content</a>
 <main class="flex flex-col m-auto mx-4 my-2">
   <slot />
 </main>
