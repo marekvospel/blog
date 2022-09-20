@@ -7,6 +7,13 @@
   $: posts = Object.values(data) as PostData[]
 </script>
 
+<svelte:head>
+  <title>Marek Vospěl - Blog</title>
+  <meta property="og:title" content="Marek Vospěl - Blog"/>
+  <meta name="description" content="Cybersecurity and web development related blog">
+  <meta name="og:description" content="Cybersecurity and web development related blog">
+</svelte:head>
+
 <div
   itemscope itemtype="https://schema.org/Blog"
   class="flex flex-col gap-4 px-4 py-2"
