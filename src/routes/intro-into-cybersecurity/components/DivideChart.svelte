@@ -15,11 +15,11 @@
     new Chart(ctx, {
       type: 'line',
       data: {
-        labels: [-2, -1, 0, 1, 2, 3, 4],
+        labels: [-4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7],
         datasets: [{
-          data: [-50, -100, undefined, 100, 50, 100 / 3, 20],
+          data: [-20, -100 / 3, -50, -100, undefined, 100, 50, 100 / 3, 25, 20, 100 / 6, 100 / 7],
           borderColor: 'rgba(0, 0, 0, 0)',
-          pointBackgroundColor: 'red',
+          pointBackgroundColor: 'cyan',
         }],
       },
       options: {
