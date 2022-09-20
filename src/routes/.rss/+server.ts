@@ -25,6 +25,7 @@ export const GET: RequestHandler = async ({ request }) => {
     <channel>
       <title>Blog - Marek Vospěl</title>
       <description>Cybersecurity and web development related blog</description>
+      <link>https://blog.vospel.cz</link>
       <copyright>2022 Marek Vospěl</copyright>
       <pubDate>${new Date().toUTCString()}</pubDate>
       <ttl>180</ttl>
@@ -35,6 +36,7 @@ export const GET: RequestHandler = async ({ request }) => {
           <description>${p.description}</description>
           <link>https://blog.vospel.cz${p.path}</link>
           <pubDate>${new Date(p.created).toUTCString()}</pubDate>
+          <updated>${new Date(p.updated).toUTCString()}</updated>
           <guid>${p.path}</guid>
         </item>
       `).join('\n')}
