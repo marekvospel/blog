@@ -24,6 +24,7 @@ export const GET: RequestHandler = async ({ request }) => {
   <rss version="2.0">
     <channel>
       <title>Blog - Marek Vospěl</title>
+      <description>Cybersecurity and web development related blog</description>
       <copyright>2022 Marek Vospěl</copyright>
       <pubDate>${new Date().toUTCString()}</pubDate>
       <ttl>180</ttl>
@@ -32,9 +33,9 @@ export const GET: RequestHandler = async ({ request }) => {
         <item>
           <title>${p.title}</title>
           <description>${p.description}</description>
-          <link>https://blog.vospel.cz/${p.path}</link>
+          <link>https://blog.vospel.cz${p.path}</link>
           <pubDate>${new Date(p.created).toUTCString()}</pubDate>
-          <guild>${p.path}</guild>
+          <guid>${p.path}</guid>
         </item>
       `).join('\n')}
     </channel>
