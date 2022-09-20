@@ -45,3 +45,5 @@ export const GET: RequestHandler = async ({ request }) => {
     }
   })
 }
+
+export const prerender = true
