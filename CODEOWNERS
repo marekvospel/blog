@@ -1,2 +1,3 @@
 * @marekvospel
 src/routes/api/posts/+server.ts @danbulant @marekvospel
+src/routes/.rss/+server.ts @danbulant @marekvospel

@@ -12,7 +12,7 @@
     Chart.register(LinearScale)
     Chart.register(PointElement)
     Chart.register(LineElement)
-    const chart = new Chart(ctx, {
+    new Chart(ctx, {
       type: 'line',
       data: {
         labels: [-2, -1, 0, 1, 2, 3, 4],
