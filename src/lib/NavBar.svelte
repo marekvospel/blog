@@ -4,7 +4,7 @@
 
 </script>
 
-<div class="flex flex-row px-4 py-2">
+<div class="flex flex-row py-2 lg-px4">
   <a href="/" class="group">
     <span class="text-cyan-400 group-hover:text-cyan-200 group-focus:text-cyan-200 transition-color duration-300">Blog</span> | Marek Vospěl
   </a>
