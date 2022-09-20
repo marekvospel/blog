@@ -26,6 +26,7 @@ const config = {
         remarkGfm,
         remarkMath,
       ],
+      layout: { _: 'src/lib/PostLayout.svelte' },
     }),
   ],
 

@@ -22,10 +22,36 @@
           pointBackgroundColor: 'red',
         }],
       },
-      options: { responsive: true },
+      options: {
+        responsive: true,
+        scales: {
+          x: {
+            grid: {
+              color(context): string {
+                // @ts-expect-error
+                // eslint-disable-next-line eqeqeq
+                return (context.tick.label == 0) ? '#ffffff80' : '#ffffff20'
+              },
+              borderColor: '#fff',
+            },
+          },
+          y: {
+            grid: {
+              color(context): string {
+                // @ts-expect-error
+                // eslint-disable-next-line eqeqeq
+                return (context.tick.label == 0) ? '#ffffff80' : '#ffffff20'
+              },
+              borderColor: '#fff',
+            },
+          },
+        },
+      },
     })
   })
 
 </script>
 
-<canvas bind:this={canvas}></canvas>
+<div class="my-4">
+  <canvas bind:this={canvas}></canvas>
+</div>

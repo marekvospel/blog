@@ -1,14 +1,17 @@
-<script lang="ts">
-  import type { Author } from '$/types'
+<script>
+  /** @type string | undefined*/
+  export let title
+  /** @type string | undefined*/
+  export let description
+
+  /** @type string | undefined*/
+  export let created
+  /** @type string | undefined*/
+  export let updated
 
 
-  export let title: string | undefined
-  export let description: string | undefined
-
-  export let created: string | undefined
-  export let updated: string | undefined
-
-  export let author: Author | undefined
+  /** @type import('$/types').Author | undefined*/
+  export let author
 </script>
 
 <svelte:head>
@@ -58,7 +61,7 @@
   }
 
   .markdown :global(code) {
-    @apply bg-dark-800 border-dark-500 border rounded-md p-1;
+    @apply bg-dark-800 border-dark-400 border rounded-md p-1;
   }
 
   .markdown :global(pre[class*="language-"]) {
