@@ -11,6 +11,7 @@ updated: 2022-19-09
 <script>
 import DivideChart from './components/DivideChart.svelte'
 import DivideExample from './components/DivideExample.svelte'
+import SendMoneyExample from './components/SendMoneyExample.svelte'
 </script>
 
 # Intro into cybersecurity
@@ -55,7 +56,6 @@ In other programming languages this code might behave differently (see for yours
 
 As you can see, if you put `0` into the input, the divided value is set to `Infinity`. Each language handles division by 0 differently, so using this code in have unexpected behaviour depending on what language you run this in.
 
-
 ## What is a software vulnerability?
 So you have seen a software bug, but such a bug is essentialy useless, as it can cause the app to crash or work with strange numbers such as `Infinity` in javascript.  
 Software vulnerability is a bug, that can be exploited to do unauthorized actions.  
@@ -71,7 +71,26 @@ function sendMoneyToBob(amount) {
 }
 ```
 In this example we again see definition of a function, this time called `sendMoneyToBob` and outside we see two variables, `myBalance` and `bobsBalance`. Variables are some values in memory that can be programmaticaly updated. In our example we update it when `sendMoneyToBob` function is called, we subtract the `amount` from `myBalance` and add it to `bobsBalance`.  
-&nbsp;
+&nbsp;  
 This example has a bug that could be exploited. Can you see it?  
+&nbsp;  
+What if we try to send negative amount? There is no code that would check whether amount is bigger than 0.  
+Let's try using -100 as an amount, and replace the variables with their values and simplify the equasions
+```javascript
+function sendMoneyToBob(amount) {
+  myBalance = 100 - -100
+  bobsBalance = 100 + -100
+}
+// which gets simplified to
+function sendMoneyToBob(amount) {
+  myBalance = 100 + 100
+  bobsBalance = 100 - 100
+}
+```
+So result of this call would be that my balance would double, and Bob's balance would be drained to 0. Also notice how anything after `//` gets grayed out, and is not taken as code, that's called a comment and is often used to describe how a function (etc.) works.  
+You can try this uing the example below.  
+<SendMoneyExample />  
+Of course this won't happen in any modern banking system, as internet banking transactions are much, much more complex, but you might encouter this in a poorly written game or some modification.  
 
-
+## Summary
+When programming an application it's basically impossible not to encounter something that could cause unexpected results (bugs - such as division by 0). In some cases those bugs can be exploited in some way. (such as in our second example, where we can take money from Bob's account without him knowing) Cybersecurity can often be about finding those bugs and thinking of a way to exploit them.

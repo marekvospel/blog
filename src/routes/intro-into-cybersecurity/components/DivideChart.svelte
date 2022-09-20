@@ -17,7 +17,7 @@
       data: {
         labels: [-2, -1, 0, 1, 2, 3, 4],
         datasets: [{
-          data: [-50, -100, undefined, 100, 50, 25, 100 / 3, 20],
+          data: [-50, -100, undefined, 100, 50, 100 / 3, 20],
           borderColor: 'rgba(0, 0, 0, 0)',
           pointBackgroundColor: 'red',
         }],
