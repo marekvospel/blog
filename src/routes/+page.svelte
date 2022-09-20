@@ -9,7 +9,7 @@
 
 <div
   itemscope itemtype="https://schema.org/Blog"
-  class="flex flex-col px-4 py-2"
+  class="flex flex-col gap-4 px-4 py-2"
 >
   {#each posts as post}
     <ListPost {...post} />

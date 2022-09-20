@@ -3,4 +3,5 @@ module.exports = {
   extends: [
     '@vospel',
   ],
+  rules: { 'no-inner-declarations': ['off'] },
 }
