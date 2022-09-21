@@ -13,7 +13,7 @@
 	"devDependencies": {
 		"@iconify-json/ic": "^1.1.9",
 		"@iconify-json/mdi": "^1.1.33",
-		"@sveltejs/adapter-auto": "1.0.0-next.77",
+		"@sveltejs/adapter-auto": "1.0.0-next.78",
 		"@sveltejs/adapter-node": "1.0.0-next.95",
 		"@sveltejs/adapter-static": "1.0.0-next.43",
 		"@sveltejs/kit": "1.0.0-next.491",
