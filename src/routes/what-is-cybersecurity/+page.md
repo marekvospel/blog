@@ -1,11 +1,11 @@
 ---
-title: Intro into cybersecurity
+title: What is a software bug, vulnerability and cybersecurity?
 description: What is cybersecurity, what is a software bug, how can an application be vulnerable and how can anyone exploit it?
 author:
   name: Marek Vospěl
   link: https://github.com/marekvospel
 created: 2022-09-19 23:00:00
-updated: 2022-09-20 16:30:00
+updated: 2022-09-26 22:30:00
 ---
 
 <script>
@@ -14,7 +14,7 @@ import DivideExample from './components/DivideExample.svelte'
 import SendMoneyExample from './components/SendMoneyExample.svelte'
 </script>
 
-# Intro into cybersecurity
+# What is a software bug, vulnerability and cybersecurity?
 By now you have probably seen numerous news articles about someone hacking. Whether it is a white-hat hacker (someone who has permission to attack specific company) or a black-hat hacker (someone who doesn't have permission to attack specific company, but does it anyways, whether it is for malicious reasons or not) in this article you're going to learn what a software bug/vulnerability is, and how it could be exploited.
 
 ## What is a software bug?
@@ -45,13 +45,13 @@ Have you spotted the bug yet?
 no? Let's write it as a mathematical function. And look at it's chart.  
 <br />
 
-$f(x) = 100 / x$
+`f(x) = 100 / x`
 <br />
 <br />
 
 <DivideChart />
 
-The function is invalid for $x=0$, because we can't divide anything by 0 - $100/0$. But what happens if we try to call the funcion on our computer? It can't decide not to run our function.  
+The function is invalid for `x=0`, because we can't divide anything by 0 - `100/0`. But what happens if we try to call the funcion on our computer? It can't decide not to run our function.  
 What happens depends on the programming language you're programming the app in. In the example I've shown before our app would crash with the following error.
 ```
 [1]    30041 floating point exception (core dumped)  ./a.out
