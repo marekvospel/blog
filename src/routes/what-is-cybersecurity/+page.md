@@ -5,7 +5,7 @@ author:
   name: Marek Vospěl
   link: https://github.com/marekvospel
 created: 2022-09-19 23:00:00
-updated: 2022-09-26 22:30:00
+updated: 2022-09-29 19:30:00
 ---
 
 <script>
@@ -15,13 +15,13 @@ import SendMoneyExample from './components/SendMoneyExample.svelte'
 </script>
 
 # What is a software bug, vulnerability and cybersecurity?
-By now you have probably seen numerous news articles about someone hacking. Whether it is a white-hat hacker (someone who has permission to attack specific company) or a black-hat hacker (someone who doesn't have permission to attack specific company, but does it anyways, whether it is for malicious reasons or not) in this article you're going to learn what a software bug/vulnerability is, and how it could be exploited.
+By now you have probably seen numerous news articles about hackers. In this article you're going to learn basic terms in the world of hackers such as what a software bug/vulnerability is and how it could be exploited.
 
 ## What is a software bug?
-By definition is a flaw in computer software, that causes it to produce an incorrect or unexpected result. If you've been using your computer for long enough, you probably have encountered a software bug already. It might have been something small (such as a button on a website not working correctly) or something big. (like an application causing your computer to crash)  
+By definition software bug is a flaw in computer software, which causes it to produce an incorrect or unexpected result. During the time you have been using a computer or a mobile phone, you have probably encountered a software bug already. It might have been something small (such as a button on a website not working correctly) or something big. (like an application causing your computer to crash)
 <br>
 
-Let's look how a software bug might look like.
+Let's look at how a software bug might look like.
 
 ```c
 float divide(a)
@@ -29,12 +29,12 @@ float divide(a)
   return 100 / a;
 }
 ```
-If you've never seen any code before, this might look a little confusing, but don't you worry, I'll explain every part of it. *(Even though I'll explain the code, I highly suggest you to learn basics of **any** programming language or programming in general (algorithmization, pseudo code, scratch))*  
-The code you see is definition of a function in C programming language, if you were to run this code nothing would happen. Functions are pices of code that accepts parameters and returns results and can be reused from other files and/or from within the file where they are defined.
+If you have never seen any code before, this might look a little confusing, but don't you worry, I will explain every part of it. *(Even though I will explain the code, I highly recommend you to learn basics of **any** programming language or programming in general (algorithmization, pseudo code, scratch))*  
+The code you see is definition of a function in C programming language, if you were to run this code nothing would happen. Functions are pices of code which accept parameters and returns results and can be reused from other files and/or from within the file where they are defined.
 They work just like mathematical functions. (ie. the sin function, you pass it a parameter and it returns a value - `sin(90deg) = 1`)  
 <br />
 
-The first line of this code is where the function is declared, `float` means the value the function returns is a real number (limited by how computers store data) `divide` is name of the function. `(a)` everything inside the brackets, the computer takes as declaration of a parameter, in this case there is just one parameter called a, which is a number (again an integer)  
+The first line of this code is where the function is declared, `float` means the value the function returns is a real number (limited by how computers store data) `divide` is the name of the function. `(a)` everything inside the brackets, the computer takes as declaration of a parameter, in this case there is just one parameter called a, which is a number (again an integer)  
 <br />
 
 On the remaining 3 lines there is the code that is executed when we call the function bounded by two curly braces. In this case the code is really simple, we just divide 100 by parameter a that was declared on the first line, and we return the result.  
