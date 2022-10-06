@@ -25,7 +25,7 @@
 		"chart.js": "^3.9.1",
 		"eslint": "^8.16.0",
 		"eslint-plugin-svelte3": "^4.0.0",
-		"isomorphic-dompurify": "^0.22.0",
+		"isomorphic-dompurify": "^0.23.0",
 		"katex": "^0.16.2",
 		"mdsvex": "^0.10.6",
 		"prism-themes": "^1.9.0",
