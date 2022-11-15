@@ -22,7 +22,7 @@
 		"@unocss/reset": "^0.46.5",
 		"@unocss/transformer-directives": "^0.46.5",
 		"@vospel/eslint-config": "^1.4.9",
-		"chart.js": "^3.9.1",
+		"chart.js": "^4.0.0",
 		"eslint": "^8.27.0",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"katex": "^0.16.3",
