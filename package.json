@@ -41,5 +41,5 @@
 		"vite": "^3.2.3"
 	},
 	"type": "module",
-	"packageManager": "pnpm@7.18.0"
+	"packageManager": "pnpm@7.18.1"
 }
