@@ -6,7 +6,7 @@ import { json } from '@sveltejs/kit'
 import type { RequestHandler } from './$types'
 
 export const GET: RequestHandler = async () => {
-  const allPostFiles = import.meta.glob('$/routes/**/*.md')
+  const allPostFiles = import.meta.glob('$/routes/posts/*/*.md')
 
   const allPosts = await Promise.all(
     Object.entries(allPostFiles).map(async ([path, resolver]) => {
