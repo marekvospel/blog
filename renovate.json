@@ -15,6 +15,10 @@
       "matchPackageNames": ["pnpm"],
       "automergeType": "branch",
       "automerge": true
+    },
+    {
+      "matchPackageNames": ["remark-math"],
+      "enabled": false
     }
   ]
 }

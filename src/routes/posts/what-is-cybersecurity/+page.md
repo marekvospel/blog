@@ -5,7 +5,7 @@ author:
   name: Marek Vospěl
   link: https://github.com/marekvospel
 created: 2022-09-19 23:00:00
-updated: 2023-01-17 22:48:00
+updated: 2023-01-17 23:00:00
 ---
 
 <script>
@@ -40,11 +40,13 @@ On the remaining 3 lines there is the code that is executed when we call the fun
 Have you spotted the bug yet?  
 no? Let's write it as a mathematical function. And look at its chart.  
 
-`f(x) = 100 / x`
+$$
+f(x) = 100 / x
+$$
 
 <DivideChart />
 
-The function is invalid for `x=0`, because we can't divide anything by 0 - `100/0`. But what happens if we try to call the function on our computer? It can't decide to not run our function.  
+The function is invalid for $x=0$, because we can't divide anything by 0 - `100/0`. But what happens if we try to call the function on our computer? It can't decide to not run our function.  
 What happens depends on the programming language you're programming the app in. In the example I've shown before our app would crash with the following error.
 ```
 [1]    30041 floating point exception (core dumped)  ./a.out

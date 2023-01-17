@@ -15,12 +15,12 @@ specifiers:
   chart.js: ^4.0.0
   eslint: ^8.27.0
   eslint-plugin-svelte3: ^4.0.0
-  katex: ^0.16.3
+  katex: ^0.16.4
   mdsvex: ^0.10.6
   prism-themes: ^1.9.0
   rehype-katex-svelte: ^1.1.2
   remark-gfm: ^3.0.1
-  remark-math: ^5.1.1
+  remark-math: ^2.0.1
   svelte: ^3.53.1
   svelte-check: ^3.0.0
   svelte-preprocess: ^5.0.0
@@ -33,10 +33,10 @@ specifiers:
 devDependencies:
   '@iconify-json/ic': 1.1.12
   '@iconify-json/mdi': 1.1.43
-  '@sveltejs/adapter-auto': 1.0.1_@sveltejs+kit@1.1.1
-  '@sveltejs/adapter-node': 1.1.3_@sveltejs+kit@1.1.1
-  '@sveltejs/adapter-static': 1.0.4_@sveltejs+kit@1.1.1
-  '@sveltejs/kit': 1.1.1_svelte@3.55.1+vite@4.0.4
+  '@sveltejs/adapter-auto': 1.0.1_@sveltejs+kit@1.1.2
+  '@sveltejs/adapter-node': 1.1.3_@sveltejs+kit@1.1.2
+  '@sveltejs/adapter-static': 1.0.4_@sveltejs+kit@1.1.2
+  '@sveltejs/kit': 1.1.2_svelte@3.55.1+vite@4.0.4
   '@typescript-eslint/eslint-plugin': 5.48.2_caon6io6stgpr7lz2rtbhekxqy
   '@typescript-eslint/parser': 5.48.2_7uibuqfxkfaozanbtbziikiqje
   '@unocss/reset': 0.48.4
@@ -50,7 +50,7 @@ devDependencies:
   prism-themes: 1.9.0
   rehype-katex-svelte: 1.1.2
   remark-gfm: 3.0.1
-  remark-math: 5.1.1
+  remark-math: 2.0.1
   svelte: 3.55.1
   svelte-check: 3.0.2_svelte@3.55.1
   svelte-preprocess: 5.0.0_atrrhq7vg4ekua4nnyrpuardle
@@ -485,16 +485,16 @@ packages:
       rollup: 3.10.0
     dev: true
 
-  /@sveltejs/adapter-auto/1.0.1_@sveltejs+kit@1.1.1:
+  /@sveltejs/adapter-auto/1.0.1_@sveltejs+kit@1.1.2:
     resolution: {integrity: sha512-IGek24xN1wJb+gz0hyGSxbIvM7q2K+BXquyycteCWbH9MPosjw8+LuIB2HIH20thE/647UEQBNqCM9R73lAUXA==}
     peerDependencies:
       '@sveltejs/kit': ^1.0.0
     dependencies:
-      '@sveltejs/kit': 1.1.1_svelte@3.55.1+vite@4.0.4
+      '@sveltejs/kit': 1.1.2_svelte@3.55.1+vite@4.0.4
       import-meta-resolve: 2.2.1
     dev: true
 
-  /@sveltejs/adapter-node/1.1.3_@sveltejs+kit@1.1.1:
+  /@sveltejs/adapter-node/1.1.3_@sveltejs+kit@1.1.2:
     resolution: {integrity: sha512-CXNYbYVAO8PlN95toqQRR6+QaFT8bejShDbmMwJfdokNpscjgxYbS8oAcWqrizxfPTBfyHlW+kDbu5KuWhxUNA==}
     peerDependencies:
       '@sveltejs/kit': ^1.0.0
@@ -502,20 +502,20 @@ packages:
       '@rollup/plugin-commonjs': 24.0.0_rollup@3.10.0
       '@rollup/plugin-json': 6.0.0_rollup@3.10.0
       '@rollup/plugin-node-resolve': 15.0.1_rollup@3.10.0
-      '@sveltejs/kit': 1.1.1_svelte@3.55.1+vite@4.0.4
+      '@sveltejs/kit': 1.1.2_svelte@3.55.1+vite@4.0.4
       rollup: 3.10.0
     dev: true
 
-  /@sveltejs/adapter-static/1.0.4_@sveltejs+kit@1.1.1:
+  /@sveltejs/adapter-static/1.0.4_@sveltejs+kit@1.1.2:
     resolution: {integrity: sha512-L6kGg19MBHW3kv3GWAPl9tJo3ohNM+dcj9Yq1U1XVu0J0MKrusyCWQ62XOfxFgS6T8Fq0KYJ5NSSAPGppvX4xA==}
     peerDependencies:
       '@sveltejs/kit': ^1.0.0
     dependencies:
-      '@sveltejs/kit': 1.1.1_svelte@3.55.1+vite@4.0.4
+      '@sveltejs/kit': 1.1.2_svelte@3.55.1+vite@4.0.4
     dev: true
 
-  /@sveltejs/kit/1.1.1_svelte@3.55.1+vite@4.0.4:
-    resolution: {integrity: sha512-5hZef6yTqiLm8fLMFD78udJI3pG9ptSndg3NNmDqxv5fS9KFABkASQwnWB25Pf1HkPNqvL+x4Tl8kyW1N8thKQ==}
+  /@sveltejs/kit/1.1.2_svelte@3.55.1+vite@4.0.4:
+    resolution: {integrity: sha512-bykE1E79i7E757i3yP+N8hSuT63AET5rY7yhqz8do2EgPXsWozwJiQS6wsPlKn7bFDv+3LGeFGV3qSbVo3GmTw==}
     engines: {node: ^16.14 || >=18}
     hasBin: true
     requiresBuild: true
@@ -583,10 +583,6 @@ packages:
 
   /@types/json-schema/7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
-    dev: true
-
-  /@types/katex/0.11.1:
-    resolution: {integrity: sha512-DUlIj2nk0YnJdlWgsFuVKcX27MLW0KbKmGVoUHmFr+74FYYNUDAaj9ZqTADvsbE8rfxuVmSFc7KczYn5Y09ozg==}
     dev: true
 
   /@types/mdast/3.0.10:
@@ -1774,7 +1770,7 @@ packages:
       fs.realpath: 1.0.0
       inflight: 1.0.6
       inherits: 2.0.4
-      minimatch: 5.1.5
+      minimatch: 5.1.6
       once: 1.4.0
     dev: true
 
@@ -2005,13 +2001,6 @@ packages:
     resolution: {integrity: sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==}
     dev: true
 
-  /katex/0.13.24:
-    resolution: {integrity: sha512-jZxYuKCma3VS5UuxOx/rFV1QyGSl3Uy/i0kTJF3HgQ5xMinCQVF8Zd4bMY/9aI9b9A2pjIBOsjSSm68ykTAr8w==}
-    hasBin: true
-    dependencies:
-      commander: 8.3.0
-    dev: true
-
   /katex/0.15.6:
     resolution: {integrity: sha512-UpzJy4yrnqnhXvRPhjEuLA4lcPn6eRngixW7Q3TJErjg3Aw2PuLFBzTkdUb89UtumxjhHTqL3a5GDGETMSwgJA==}
     hasBin: true
@@ -2177,14 +2166,6 @@ packages:
       - supports-color
     dev: true
 
-  /mdast-util-math/2.0.1:
-    resolution: {integrity: sha512-ZZtjyRwobsiVg4bY0Q5CzAZztpbjRIA7ZlMMb0PNkwTXOnJTUoHvzBhVG95LIuek5Mlj1l2P+jBvWviqW7G+0A==}
-    dependencies:
-      '@types/mdast': 3.0.10
-      longest-streak: 3.1.0
-      mdast-util-to-markdown: 1.5.0
-    dev: true
-
   /mdast-util-phrasing/3.0.0:
     resolution: {integrity: sha512-S+QYsDRLkGi8U7o5JF1agKa/sdP+CNGXXLqC17pdTVL8FHHgQEiwFGa9yE5aYtUxNiFGYoaDy9V1kC85Sz86Gg==}
     dependencies:
@@ -2326,18 +2307,6 @@ packages:
       micromark-extension-gfm-task-list-item: 1.0.3
       micromark-util-combine-extensions: 1.0.0
       micromark-util-types: 1.0.2
-    dev: true
-
-  /micromark-extension-math/2.0.2:
-    resolution: {integrity: sha512-cFv2B/E4pFPBBFuGgLHkkNiFAIQv08iDgPH2HCuR2z3AUgMLecES5Cq7AVtwOtZeRrbA80QgMUk8VVW0Z+D2FA==}
-    dependencies:
-      '@types/katex': 0.11.1
-      katex: 0.13.24
-      micromark-factory-space: 1.0.0
-      micromark-util-character: 1.1.0
-      micromark-util-symbol: 1.0.1
-      micromark-util-types: 1.0.2
-      uvu: 0.5.6
     dev: true
 
   /micromark-factory-destination/1.0.0:
@@ -2525,8 +2494,8 @@ packages:
       brace-expansion: 1.1.11
     dev: true
 
-  /minimatch/5.1.5:
-    resolution: {integrity: sha512-CI8wwdrll4ehjPAqs8TL8lBPyNnpZlQI02Wn8C1weNz/QbUbjh3OMxgMKSnvqfKFdLlks3EzHB9tO0BqGc3phQ==}
+  /minimatch/5.1.6:
+    resolution: {integrity: sha512-lKwV/1brpG6mBUFHtb7NUmtABCb2WZZmm2wNiOA5hAb8VdCS4B3dtMWyvcoViccwAW/COERjXLt0zP1zXUN26g==}
     engines: {node: '>=10'}
     dependencies:
       brace-expansion: 2.0.1
@@ -2799,13 +2768,8 @@ packages:
       - supports-color
     dev: true
 
-  /remark-math/5.1.1:
-    resolution: {integrity: sha512-cE5T2R/xLVtfFI4cCePtiRn+e6jKMtFDR3P8V3qpv8wpKjwvHoBA4eJzvX+nVrnlNy0911bdGmuspCSwetfYHw==}
-    dependencies:
-      '@types/mdast': 3.0.10
-      mdast-util-math: 2.0.1
-      micromark-extension-math: 2.0.2
-      unified: 10.1.2
+  /remark-math/2.0.1:
+    resolution: {integrity: sha512-FokDg5BmlPbKaAdD4IfSVuRgYH6FBPeIn0zxZA6oZ6epc4qOSjoSJPyhsH0H/WKABuaCVMJuF5O2STti6UmBQw==}
     dev: true
 
   /resolve-from/4.0.0:
