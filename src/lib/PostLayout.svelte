@@ -51,7 +51,7 @@
   }
 
   .markdown :global(h2) {
-    @apply text-2xl font-extrabold mt-4 mb-2;
+    @apply text-2xl font-extrabold border-b-2 border-opacity-75 border-dark-400 mt-4 mb-2 pb-1;
   }
 
   .markdown :global(h3) {
@@ -63,7 +63,11 @@
   }
 
   .markdown :global(h5) {
-    @apply font-semibold mt-4 my-2;
+    @apply font-semibold mt-4 mb-2;
+  }
+
+  .markdown :global(p) {
+    @apply mb-4;
   }
 
   .markdown :global(code) {
@@ -80,5 +84,13 @@
 
   .markdown :global(strong) {
     @apply font-extrabold;
+  }
+
+  .markdown > :global(:first-child) {
+    @apply mt-0;
+  }
+
+  .markdown > :global(:last-child) {
+    @apply mb-0;
   }
 </style>
