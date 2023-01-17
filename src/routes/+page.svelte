@@ -2,10 +2,11 @@
   import ListPost from '$/lib/ListPost.svelte'
   import NavBar from '$/lib/NavBar.svelte'
   import type { PostData } from '$/types'
+  import type { LayoutServerData } from '../../.svelte-kit/types/src/routes/$types'
 
-  export let data: any
+  export let data: LayoutServerData
 
-  $: posts = Object.values(data) as PostData[]
+  $: posts = data.posts
 </script>
 
 <svelte:head>
