@@ -7,9 +7,10 @@
 
 <div
   class="
-    flex flex-row gap-6 items-center justify-between
+    flex flex-col gap-6 items-center justify-between
     my-4 py-4 px-8 rounded-xl
     bg-dark-400
+    md:flex-row
   "
 >
   <input
@@ -20,7 +21,7 @@
       focus-visible:outline focus-visible:outline-cyan-400 focus-visible:outline-size-[1px]
     "
   />
-  <p>Divided: { divided }</p>
+  <p class="!mb-0">Divided: { divided }</p>
 </div>
 
 <style>
