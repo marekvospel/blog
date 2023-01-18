@@ -28,7 +28,7 @@
 </svelte:head>
 
 <NavBar />
-<article itemscope itemtype="http://schema.org/Article" class="mb-8" id="content">
+<article itemscope itemtype="http://schema.org/Article" class="mb-8 max-w-[100ch] w-[100%] mx-auto" id="content">
   {#if created}
     <meta itemprop="datePublished" content={created} />
   {/if}
@@ -50,9 +50,6 @@
 
 <style>
 
-  .markdown {
-    @apply max-w-[100ch] w-[100%] mx-auto;
-  }
   .markdown :global(h1) {
     @apply text-3xl font-extrabold border-b-2 border-opacity-75 border-dark-400 mt-2 mb-4 pb-1;
   }
