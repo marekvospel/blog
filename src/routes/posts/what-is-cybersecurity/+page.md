@@ -5,13 +5,13 @@ author:
   name: Marek Vospěl
   link: https://github.com/marekvospel
 created: 2022-09-19 23:00:00
-updated: 2023-01-17 23:00:00
+updated: 2023-01-18 09:28:00
 ---
 
 <script>
-import DivideChart from './components/DivideChart.svelte'
-import DivideExample from './components/DivideExample.svelte'
-import SendMoneyExample from './components/SendMoneyExample.svelte'
+import DivideChart from './components/DivideChart.svelte';
+import DivideExample from './components/DivideExample.svelte';
+import SendMoneyExample from './components/SendMoneyExample.svelte';
 </script>
 
 # What is a software bug, vulnerability and cybersecurity?
