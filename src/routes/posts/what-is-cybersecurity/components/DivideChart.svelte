@@ -30,14 +30,14 @@
           x: {
             grid: {
               color(context): string {
-                return (context.tick.label.toString() === '0') ? '#ffffff80' : '#ffffff20'
+                return ((context.tick.label ?? '').toString() === '0') ? '#ffffff80' : '#ffffff20'
               },
             },
           },
           y: {
             grid: {
               color(context): string {
-                return (context.tick.label.toString() === '0') ? '#ffffff80' : '#ffffff20'
+                return ((context.tick.label ?? '').toString() === '0') ? '#ffffff80' : '#ffffff20'
               },
             },
           },

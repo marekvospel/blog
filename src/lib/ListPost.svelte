@@ -6,6 +6,7 @@
   export let description = ''
   export let path = ''
   export let created: string | undefined
+  export let tags: string[] = []
 
   $: timeAgo = formatTimeAgo(created ?? Date.now())
 </script>
@@ -14,6 +15,7 @@
   itemprop="blogPost" itemtype="https://schema.org/BlogPosting" href={path}
   class="px-6 py-4 flex flex-row rounded-2xl bg-dark-400 group"
 >
+  <meta itemprop="keywords" content={tags.join(', ') ?? ''} />
   <div class="flex flex-col gap-1">
     <h3 class="text-lg group-hover:text-cyan-400 transition-colors duration-300">{ title }</h3>
     <p class="text-sm">{ description }</p>

@@ -1,15 +1,17 @@
 <script>
   import NavBar from '$lib/NavBar.svelte'
 
-  /** @type string | undefined*/
-  export let title
-  /** @type string | undefined*/
-  export let description
+  /** @type string */
+  export let title = ''
+  /** @type string */
+  export let description = ''
 
   /** @type string | undefined*/
   export let created
   /** @type string | undefined*/
   export let updated
+  /** @type string[] */
+  export let tags = []
 
 
   /** @type import('$/types').Author | undefined*/
@@ -18,22 +20,27 @@
 
 <svelte:head>
   <title>{ title }</title>
-  <meta name="og:title" content={title}>
-  <meta name="description" content={description}>
-  <meta name="og:description" content={description}>
+  <meta name="og:title" content={title} />
+  <meta name="description" content={description} />
+  <meta name="og:description" content={description} />
+  <meta name="keywords" content={tags.join(', ')} />
+  <meta />
 </svelte:head>
 
 <NavBar />
-<article itemscope itemtype="http://schema.org/Article" class="markdown mb-8" id="content">
+<article itemscope itemtype="http://schema.org/Article" class="mb-8" id="content">
   {#if created}
-    <meta itemprop="datePublished" content={created}/>
+    <meta itemprop="datePublished" content={created} />
   {/if}
   {#if updated}
-    <meta itemprop="dateModified" content={updated}/>
+    <meta itemprop="dateModified" content={updated} />
   {/if}
   <meta itemprop="publisher" content="vospel.cz" />
+  <meta itemprop="keywords" content={tags.join(', ')} />
   <span><a href="/" class="text-cyan-400 hover:text-cyan-200 transition-colors duration-300">Blog</a> <span class="text-dark-50">/</span></span>
-  <slot />
+  <div class="markdown">
+    <slot />
+  </div>
   {#if author?.name}
     <span itemprop="author" itemtype="http://schema.org/Person" class="hidden">
       By <a itemprop="name" href={author.link}>{ author.name }</a>

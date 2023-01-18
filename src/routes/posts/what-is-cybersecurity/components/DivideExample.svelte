@@ -19,13 +19,14 @@
       disable-input-arrows
       focus-visible:outline focus-visible:outline-cyan-400 focus-visible:outline-size-[1px]
     "
-  >
+  />
   <p>Divided: { divided }</p>
 </div>
 
 <style>
   input[type=number] {
     -moz-appearance: textfield;
+    appearance: textfield;
   }
 
   input::-webkit-outer-spin-button,

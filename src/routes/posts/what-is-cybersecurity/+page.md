@@ -4,8 +4,15 @@ description: What is cybersecurity, what is a software bug, how can an applicati
 author:
   name: Marek Vospěl
   link: https://github.com/marekvospel
+tags:
+  - cybersecurity
+  - hacking
+  - user input
+  - exploit
+  - software
+  - technology
 created: 2022-09-19 23:00:00
-updated: 2023-01-18 09:28:00
+updated: 2023-01-18 10:05:00
 ---
 
 <script>

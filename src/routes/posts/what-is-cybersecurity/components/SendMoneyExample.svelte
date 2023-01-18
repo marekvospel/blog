@@ -25,7 +25,7 @@
         disable-input-arrows
         focus-visible:outline focus-visible:outline-cyan-400 focus-visible:outline-size-[1px]
       "
-    >
+    />
     <button type="button" class="px-8 py-2 rounded-md bg-cyan-400" on:click={sendMoneyToBob}>Send</button>
   </div>
   <p>My balance: { myBalance }</p>
@@ -35,6 +35,7 @@
 <style>
   input[type=number] {
     -moz-appearance: textfield;
+    appearance: textfield;
   }
 
   input::-webkit-outer-spin-button,
