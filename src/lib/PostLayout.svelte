@@ -13,8 +13,22 @@
   /** @type string[] */
   export let tags = []
   /** @type string | undefined */
-  export let thumbnail
+  export let thumbnail = undefined
 
+  let thumbnailUrl = undefined
+  $: if (thumbnail) {
+    try {
+      const parsed = new URL(thumbnail)
+
+      if (parsed.protocol === 'http:' || parsed.protocol === 'https:') {
+        thumbnailUrl = thumbnail
+      } else {
+        thumbnailUrl = `https://pub-dc4c4b46dcdb4b8cafe7c4122362233b.r2.dev/posts/${encodeURIComponent(thumbnail)}`
+      }
+    } catch {
+        thumbnailUrl = `https://pub-dc4c4b46dcdb4b8cafe7c4122362233b.r2.dev/posts/${encodeURIComponent(thumbnail)}`
+    }
+  }
 
   /** @type import('$/types').Author | undefined*/
   export let author
@@ -27,7 +41,7 @@
   <meta name="og:description" content={description} />
   <meta name="keywords" content={tags.join(', ')} />
   {#if thumbnail}
-    <meta name="og:image" content="https://96d89e5aa2f6325be95a9b0a29419d9d.r2.cloudflarestorage.com/vospel-cz/posts/{encodeURIComponent(thumbnail)}" />
+    <meta name="og:image" content={thumbnailUrl} />
   {/if}
 </svelte:head>
 
@@ -40,7 +54,7 @@
     <meta itemprop="dateModified" content={updated} />
   {/if}
   {#if thumbnail}
-    <meta itemprop="thumbnailUrl" content="https://96d89e5aa2f6325be95a9b0a29419d9d.r2.cloudflarestorage.com/vospel-cz/posts/{encodeURIComponent(thumbnail)}" />
+    <meta itemprop="thumbnailUrl" content={thumbnailUrl} />
   {/if}
   <meta itemprop="publisher" content="vospel.cz" />
   <meta itemprop="keywords" content={tags.join(', ')} />
