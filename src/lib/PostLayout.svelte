@@ -26,7 +26,7 @@
         thumbnailUrl = `https://pub-dc4c4b46dcdb4b8cafe7c4122362233b.r2.dev/posts/${encodeURIComponent(thumbnail)}`
       }
     } catch {
-        thumbnailUrl = `https://pub-dc4c4b46dcdb4b8cafe7c4122362233b.r2.dev/posts/${encodeURIComponent(thumbnail)}`
+      thumbnailUrl = `https://pub-dc4c4b46dcdb4b8cafe7c4122362233b.r2.dev/posts/${encodeURIComponent(thumbnail)}`
     }
   }
 
@@ -37,11 +37,15 @@
 <svelte:head>
   <title>{ title }</title>
   <meta name="og:title" content={title} />
+  <meta name="twitter:title" content={title} />
   <meta name="description" content={description} />
   <meta name="og:description" content={description} />
+  <meta name="twitter:description" content={description} />
   <meta name="keywords" content={tags.join(', ')} />
+  <meta name="twitter:card" content="summary_large_image">
   {#if thumbnail}
     <meta name="og:image" content={thumbnailUrl} />
+    <meta name="twitter:image" content={thumbnailUrl} />
   {/if}
 </svelte:head>
 
