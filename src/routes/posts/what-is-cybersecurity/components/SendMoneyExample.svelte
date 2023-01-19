@@ -12,12 +12,13 @@
 
 <div
   class="
-    flex flex-row gap-6 items-center justify-between
+    flex flex-col gap-4 items-center justify-between
     my-4 py-4 px-8 rounded-xl
     bg-dark-400
+    md:gap-6 lg:flex-row
   "
 >
-  <div>
+  <div class="flex flex-col gap-2 md:flex-row">
     <input
       type="number" bind:value={amount} class="
         px-4 py-2
@@ -28,8 +29,8 @@
     />
     <button type="button" class="px-8 py-2 rounded-md bg-cyan-400" on:click={sendMoneyToBob}>Send</button>
   </div>
-  <p>My balance: { myBalance }</p>
-  <p>Bob's balance: { bobsBalance }</p>
+  <p class="!mb-0">My balance: { myBalance }</p>
+  <p class="!mb-0">Bob's balance: { bobsBalance }</p>
 </div>
 
 <style>
