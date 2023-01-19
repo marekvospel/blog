@@ -6,12 +6,14 @@
   /** @type string */
   export let description = ''
 
-  /** @type string | undefined*/
+  /** @type string | undefined */
   export let created
-  /** @type string | undefined*/
+  /** @type string | undefined */
   export let updated
   /** @type string[] */
   export let tags = []
+  /** @type string | undefined */
+  export let thumbnail
 
 
   /** @type import('$/types').Author | undefined*/
@@ -24,7 +26,9 @@
   <meta name="description" content={description} />
   <meta name="og:description" content={description} />
   <meta name="keywords" content={tags.join(', ')} />
-  <meta />
+  {#if thumbnail}
+    <meta name="og:image" content="https://96d89e5aa2f6325be95a9b0a29419d9d.r2.cloudflarestorage.com/vospel-cz/posts/{encodeURIComponent(thumbnail)}" />
+  {/if}
 </svelte:head>
 
 <NavBar />
@@ -34,6 +38,9 @@
   {/if}
   {#if updated}
     <meta itemprop="dateModified" content={updated} />
+  {/if}
+  {#if thumbnail}
+    <meta itemprop="thumbnailUrl" content="https://96d89e5aa2f6325be95a9b0a29419d9d.r2.cloudflarestorage.com/vospel-cz/posts/{encodeURIComponent(thumbnail)}" />
   {/if}
   <meta itemprop="publisher" content="vospel.cz" />
   <meta itemprop="keywords" content={tags.join(', ')} />
