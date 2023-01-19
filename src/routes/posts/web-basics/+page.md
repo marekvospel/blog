@@ -109,4 +109,21 @@ p.my-paragraph {
 }
 ```
 
+## How does the web browser communicate?
+Now that you have a website, you just have a bunch of files, how to share it on the internet? How is it possible that
+even-though I don't have the files of github.com, the website still loads when I open it?
 
+It's all thanks to the internet. (obviously) For a website to be accessible from anywhere, it needs to be uploaded on
+a web server. When enter an url into the search bar, your web server opens a connection to the server it is uploaded on,
+waits wor the response and then renders the HTML. In case there are links to CSS (or other files like images), it also
+loads them.  
+Of course the browser and the web server must use some known format of the requests and responses, because otherwise
+they wouldn't know what means what, web server what file it should send and the browser what is the content it should
+use and what is just status information, for that HTTP protocol is used.
+
+## HTTP
+There are many ways to communicate over the internet, you can have a continuous connection, where the services can talk
+to each other whenever they can during the connection is open, or you can have request-response service, that just forms
+a connection, responds and disconnects. The connection could be checking whether any data was lost during the
+transmission or it could ignore lost data. HTTP defines what sort of connection should be made and how requests / 
+responses look.
