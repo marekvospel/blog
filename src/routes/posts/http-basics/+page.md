@@ -95,3 +95,18 @@ two classes.
   font-weight: bold;
 }
 ```
+
+You can also combine multiple selectors using combinators, so a rule is applied for example to all paragraphs inside a
+div with a specific class. Divs are used extensively during web development.
+```css
+/* All child paragraphs inside an element with class article */
+.article p {
+  color: red
+}
+/* A paragraph that also has my-paragraph class */
+p.my-paragraph {
+  color: blue
+}
+```
+
+
