@@ -6,13 +6,29 @@
   /** @type string */
   export let description = ''
 
-  /** @type string | undefined*/
+  /** @type string | undefined */
   export let created
-  /** @type string | undefined*/
+  /** @type string | undefined */
   export let updated
   /** @type string[] */
   export let tags = []
+  /** @type string | undefined */
+  export let thumbnail = undefined
 
+  let thumbnailUrl = undefined
+  $: if (thumbnail) {
+    try {
+      const parsed = new URL(thumbnail)
+
+      if (parsed.protocol === 'http:' || parsed.protocol === 'https:') {
+        thumbnailUrl = thumbnail
+      } else {
+        thumbnailUrl = `https://pub-dc4c4b46dcdb4b8cafe7c4122362233b.r2.dev/posts/${encodeURIComponent(thumbnail)}`
+      }
+    } catch {
+      thumbnailUrl = `https://pub-dc4c4b46dcdb4b8cafe7c4122362233b.r2.dev/posts/${encodeURIComponent(thumbnail)}`
+    }
+  }
 
   /** @type import('$/types').Author | undefined*/
   export let author
@@ -21,10 +37,16 @@
 <svelte:head>
   <title>{ title }</title>
   <meta name="og:title" content={title} />
+  <meta name="twitter:title" content={title} />
   <meta name="description" content={description} />
   <meta name="og:description" content={description} />
+  <meta name="twitter:description" content={description} />
   <meta name="keywords" content={tags.join(', ')} />
-  <meta />
+  <meta name="twitter:card" content="summary_large_image">
+  {#if thumbnail}
+    <meta name="og:image" content={thumbnailUrl} />
+    <meta name="twitter:image" content={thumbnailUrl} />
+  {/if}
 </svelte:head>
 
 <NavBar />
@@ -34,6 +56,9 @@
   {/if}
   {#if updated}
     <meta itemprop="dateModified" content={updated} />
+  {/if}
+  {#if thumbnail}
+    <meta itemprop="thumbnailUrl" content={thumbnailUrl} />
   {/if}
   <meta itemprop="publisher" content="vospel.cz" />
   <meta itemprop="keywords" content={tags.join(', ')} />

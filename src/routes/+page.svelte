@@ -12,8 +12,12 @@
 <svelte:head>
   <title>Marek Vospěl - Blog</title>
   <meta property="og:title" content="Marek Vospěl - Blog"/>
+  <meta name="twitter:title" content="Marek Vospěl - Blog" />
   <meta name="description" content="Cybersecurity and web development related blog">
   <meta name="og:description" content="Cybersecurity and web development related blog">
+  <meta name="twitter:description" content="Cybersecurity and web development releated blog" />
+  <meta property="og:url" content="https://blog.vospel.cz/">
+  <meta name="twitter:card" content="summary_large_image">
 </svelte:head>
 
 <NavBar />
