@@ -123,7 +123,26 @@ use and what is just status information, for that HTTP protocol is used.
 
 ## HTTP
 There are many ways to communicate over the internet, you can have a continuous connection, where the services can talk
-to each other whenever they can during the connection is open, or you can have request-response service, that just forms
-a connection, responds and disconnects. The connection could be checking whether any data was lost during the
+to each other whenever they can during the connection is open, or you can have request-response protocol, that just
+forms a connection, responds and disconnects. The connection could be checking whether any data was lost during the
 transmission or it could ignore lost data. HTTP defines what sort of connection should be made and how requests / 
 responses look.
+
+But HTTP isn't the only protocol there is, there are hundreds of protocols, that define what sort of connection is
+formed and what it's format is. The reason why HTTP is explained is that it's the protocol used by web browsers for
+loading websites.
+
+So what does HTTP connection look like? HTTP is request-response protocol, so for every interaction, a new connection is
+made (for example the HTML is loaded with one request, it's CSS is loaded right after in another request) (there are
+exceptions like [HTTP polling](https://stackoverflow.com/questions/12555043/my-understanding-of-http-polling-long-polling-http-streaming-and-websockets))  
+Excluding the information required for the data to get to the right place over the internet, the protocol is using
+text for everything. Let's go over the different parts of the following example request.
+
+```http request
+GET / HTTP/1.0
+Host: vospel.cz
+Accept: */*
+User-Agent: Mozilla/5.0 (Linux)
+
+```
+
