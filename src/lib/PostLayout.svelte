@@ -76,11 +76,11 @@
 <style>
 
   .markdown :global(h1) {
-    @apply text-3xl font-extrabold border-b-2 border-opacity-75 border-dark-400 mt-2 mb-4 pb-1;
+    @apply text-3xl font-extrabold border-b border-opacity-75 border-slate-600 mt-2 mb-4 pb-1;
   }
 
   .markdown :global(h2) {
-    @apply text-2xl font-extrabold border-b-2 border-opacity-75 border-dark-400 mt-4 mb-2 pb-1;
+    @apply text-2xl font-extrabold border-b border-opacity-75 border-slate-600 mt-4 mb-2 pb-1;
   }
 
   .markdown :global(h3) {
@@ -99,12 +99,18 @@
     @apply mb-4;
   }
 
+  /* TODO: add anchor style */
+
   .markdown :global(code) {
-    @apply bg-dark-800 border-dark-400 border rounded-md p-1;
+    @apply bg-dark-800 border-dark-400 border rounded-md p-1 overflow-x-auto;
   }
 
   .markdown :global(pre[class*="language-"]) {
-    @apply bg-transparent m-0 p-0;
+    @apply bg-transparent p-0;
+  }
+
+  .markdown :global(pre) {
+    @apply mb-4;
   }
 
   .markdown :global(pre > code) {
