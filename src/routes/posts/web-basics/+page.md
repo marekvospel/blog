@@ -33,20 +33,20 @@ An example of a tag is strong, which means the text inside will be <strong>bold<
 It's important not to forget the tags need to be closed, that can be done by adding a closing tag - the same tag as
 the opening one, but the name starting with /.
 
-Some tags can even have some attributes, that define how they behave, for example you can add an anchor (link) and by
+Some tags can even have attributes, that define how they behave. For example, you can add an anchor (link) and by
 using the `href` attribute, you can tell it what should be opened when you click it. You can also define whether the
 link is opened in current or in new tab using the `target` attribute.
 ```html
 <!-- This opens vospel.cz in current tab when clicked -->
 <a href="https://vospel.cz">open vospel.cz</a>
-<!-- This opens the website in a new tab-->
+<!-- This opens the website in a new tab -->
 <a href="https://vospel.cz" target="_blank">open vospel.cz</a>
 ```
 As you probably noticed in the anchor example, you can also add comments by wrapping them inside `<!--` and `-->`.
 
 ## Styling the website
-Now that you know how HTML works, you are probably wondering if I can only define how text is displayed on the website,
-how can I make my website look modern and not like [Richard Stallman's website](https://stallman.org).
+Now that you know how HTML works, you are probably wondering if you can only define how text is displayed on the
+website, how can I make my website look modern and not like [Richard Stallman's website](https://stallman.org).
 
 To add some styles to your website, you're going to need to learn another language, CSS (Cascading Style Sheets). By
 adding a `<link>` with `rel="stylesheet"` and `href="<path to .css file>"` attributes, the browser is going to try to
@@ -78,13 +78,13 @@ h1 {
 }
 ```
 
-You know all the ways to make text look different, but yet how to actually position the content differently is still a
-mystery. It's obvious, that there are css rules to position text in the center, add a background, padding, margin etc.
+Now you know all the ways to make text look different, but yet how to actually position the content differently is still
+a mystery. It's obvious, that there are css rules to position text in the center, add a background, padding, margin etc.
 but there is only so many HTML elements, after just a few rules you've run out of options to define styles. That's where
 classes come into play.  
 By adding a `class` attribute to an element, you can suddenly use the class as a selector by prepending it with a `.`.
-Classes cannot have spaces inside them, as `class` attribute is a space separated list, so adding a space would make it
-two classes.
+Classes cannot have spaces inside them, because `class` attribute is a space separated list, so adding a space would
+make it two classes.
 ```css
 /* <p class="should-be-red should-be-bold">red text</p> */
 .should-be-red {
@@ -109,16 +109,17 @@ p.my-paragraph {
 ```
 
 ## How does the web browser communicate?
-Now that you have a website, you just have a bunch of files, how to share it on the internet? How is it possible that
+Now you have a website, but it's just a bunch of files, how to share it on the internet? How is it possible that
 even-though I don't have the files of github.com, the website still loads when I open it?
 
 It's all thanks to the internet. (obviously) For a website to be accessible from anywhere, it needs to be uploaded on
-a web server. When enter an url into the search bar, your web server opens a connection to the server it is uploaded on,
-waits wor the response and then renders the HTML. In case there are links to CSS (or other files like images), it also
-loads them.  
+a web server. When you enter an url into the search bar, your web server opens a connection to the server it is uploaded
+on, waits for the response and then renders the HTML. In case there are links to CSS (or other files like images), it
+also loads them.
+
 Of course the browser and the web server must use some known format of the requests and responses, because otherwise
 they wouldn't know what means what, web server what file it should send and the browser what is the content it should
-use and what is just status information, for that HTTP protocol is used.
+use and what is just status information. For that the HTTP protocol is used.
 
 ## HTTP
 There are many ways to communicate over the internet, you can have a continuous connection, where the services can talk
@@ -131,8 +132,8 @@ But HTTP isn't the only protocol there is, there are hundreds of protocols, that
 formed and what it's format is. The reason why HTTP is explained is that it's the protocol used by web browsers for
 loading websites.
 
-So what does HTTP connection look like? HTTP is request-response protocol, so for every interaction, a new connection is
-made (for example the HTML is loaded with one request, it's CSS is loaded right after in another request) (there are
+So what does HTTP connection look like? HTTP is a request-response protocol, so for every interaction, a new connection
+is made (for example the HTML is loaded with one request, it's CSS is loaded right after in another request) (there are
 exceptions like [HTTP polling](https://stackoverflow.com/questions/12555043/my-understanding-of-http-polling-long-polling-http-streaming-and-websockets))  
 Excluding the information required for the data to get to the right place over the internet, the protocol is using
 text for everything. Let's go over the different parts of the following example request.
