@@ -9,9 +9,9 @@ tags:
 - development
 - software
 - technology
-
-created: 2023-01-18 10:30:00
-updated: 2023-01-18 10:30:00
+thumbnail: web-basics.webp
+created: 2023-01-22 00:30:00
+updated: 2023-01-22 00:30:00
 ---
 # What is HTTP? How does a basic webpage work?
 Thanks to the internet, opening and using a website is really easy, you just open your web browser and with a search
@@ -158,7 +158,7 @@ The last thing you can see is what HTTP version is used. That's because it would
 when we need to do a small change, so the web protocols are versioned. Today you're mostly going to see HTTP 2,
 (`HTTP/2`) but `HTTP/3` also started appearing.
 
-Second trough fourth line are so-called Headers, they give the web-server additional information about the header, for
+Second trough fourth line are so-called Headers, they give the web-server additional information about the request, for
 example thanks to the Host header the web server can serve multiple pages and determine which should be sent based on
 this header. Accept might be used to tell the server what sort of data we expect it to return, in .html file it could be
 `text/html`. In the `User-Agent` field the browser version is sent, for compatibility.
@@ -179,7 +179,7 @@ content-length: 18
 
 Now the response is very similar, first we can see the HTTP version. (`HTTP/2`) The second information is the status
 code. (`200`) Based on this number you can tell whether the request was successful or not, whether it is your or the
-server's fault it was not successful, because they are all predefined, all you need to know is that 2xx means success,
+server's fault it was not successful, because they are all predefined. All you need to know is that 2xx means success,
 3xx means redirect, 4xx means failure caused by you and 5xx means failure caused by the server.
 
 Just like with the request, the server can send some information about the response, in this example you can see the
@@ -193,4 +193,4 @@ headers.
 Making a website is as easy as opening a new text file and writing the website's content. That is thanks to HTML
 (Hypertext Markup Language) which the browsers can read and render the text from it in the correct positions thanks 
 to CSS. (Cascading Style Sheets) These files can be shared over the internet thanks to the HTTP protocol. (Hypertext
-Transfer Protocol) 
+Transfer Protocol)
