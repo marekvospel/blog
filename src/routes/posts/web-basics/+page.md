@@ -139,10 +139,58 @@ Excluding the information required for the data to get to the right place over t
 text for everything. Let's go over the different parts of the following example request.
 
 ```http request
-GET / HTTP/1.0
+GET /index.html HTTP/1.0
 Host: vospel.cz
 Accept: */*
 User-Agent: Mozilla/5.0 (Linux)
 
 ```
 
+On the first line there are 3 pieces of information. First, GET, the method of this request. For loading files it's
+always going to be GET, which basically means you want to GET some data, whether it is a post content, HTML, CSS or
+anything else. The second most used method is POST, which is used to send data to the website - even logging in. There
+are also methods like DELETE, PUT, PATCH or OPTIONS, which are used less. (usually in RESTFUL APIs)
+
+The second information is `/index.html`, that's the path of the request, that's what tells the web server what exactly
+you want to do, which file you want to download (`index.css`) or what type of data you are posting.
+
+The last thing you can see is what HTTP version is used. That's because it would be stupid to create whole new protocol
+when we need to do a small change, so the web protocols are versioned. Today you're mostly going to see HTTP 2,
+(`HTTP/2`) but `HTTP/3` also started appearing.
+
+Second trough fourth line are so-called Headers, they give the web-server additional information about the header, for
+example thanks to the Host header the web server can serve multiple pages and determine which should be sent based on
+this header. Accept might be used to tell the server what sort of data we expect it to return, in .html file it could be
+`text/html`. In the `User-Agent` field the browser version is sent, for compatibility.
+
+Notice how the request ends with an empty line. It's there to tell the headers ended and the following content are the
+data we are sending (in case of GET request, the data is skipped)
+
+Let's look at the response.
+
+```http request
+HTTP/2 200
+server: nginx/1.18.0 (Ubuntu)
+content-type: text/html
+content-length: 18
+
+<p>Hello world</p>
+```
+
+Now the response is very similar, first we can see the HTTP version. (`HTTP/2`) The second information is the status
+code. (`200`) Based on this number you can tell whether the request was successful or not, whether it is your or the
+server's fault it was not successful, because they are all predefined, all you need to know is that 2xx means success,
+3xx means redirect, 4xx means failure caused by you and 5xx means failure caused by the server.
+
+Just like with the request, the server can send some information about the response, in this example you can see the
+web server service, and it's version, the type of the returned data (`text/html`) and the length of the data, which is
+used to determine whether the data arrived correctly or corrupted.
+
+The last line is the actual html file we requested. Again there is one empty line before it to split it from the
+headers.
+
+## Summary
+Making a website is as easy as opening a new text file and writing the website's content. That is thanks to HTML
+(Hypertext Markup Language) which the browsers can read and render the text from it in the correct positions thanks 
+to CSS. (Cascading Style Sheets) These files can be shared over the internet thanks to the HTTP protocol. (Hypertext
+Transfer Protocol) 
