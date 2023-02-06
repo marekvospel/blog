@@ -5,7 +5,7 @@ specifiers:
   '@iconify-json/mdi': ^1.1.34
   '@sveltejs/adapter-auto': ^2.0.0
   '@sveltejs/adapter-node': ^1.0.0
-  '@sveltejs/adapter-static': ^1.0.0
+  '@sveltejs/adapter-static': ^2.0.0
   '@sveltejs/kit': ^1.0.0
   '@typescript-eslint/eslint-plugin': ^5.42.1
   '@typescript-eslint/parser': ^5.42.1
@@ -35,7 +35,7 @@ devDependencies:
   '@iconify-json/mdi': 1.1.46
   '@sveltejs/adapter-auto': 2.0.0_@sveltejs+kit@1.5.0
   '@sveltejs/adapter-node': 1.1.7_@sveltejs+kit@1.5.0
-  '@sveltejs/adapter-static': 1.0.6_@sveltejs+kit@1.5.0
+  '@sveltejs/adapter-static': 2.0.0_@sveltejs+kit@1.5.0
   '@sveltejs/kit': 1.5.0_svelte@3.55.1+vite@4.1.1
   '@typescript-eslint/eslint-plugin': 5.51.0_b635kmla6dsb4frxfihkw4m47e
   '@typescript-eslint/parser': 5.51.0_4vsywjlpuriuw3tl5oq6zy5a64
@@ -506,10 +506,10 @@ packages:
       rollup: 3.14.0
     dev: true
 
-  /@sveltejs/adapter-static/1.0.6_@sveltejs+kit@1.5.0:
-    resolution: {integrity: sha512-gTus2jW6bEQAZoT1MdmPHWZZmcb6dfLWc0r6dFHnbzSDZ68kifqQ1E+dZDOMF7aXeRV91sgnPuAn2MtpinVdlA==}
+  /@sveltejs/adapter-static/2.0.0_@sveltejs+kit@1.5.0:
+    resolution: {integrity: sha512-M9F8EyCIdVcpZu0zvS7U7v+rc7elNNDUkMHLsOkJYlfQ9rDdif3fqteMqddcrq1lFPEGH1ErdTjpsXdb3k1e8w==}
     peerDependencies:
-      '@sveltejs/kit': ^1.0.0
+      '@sveltejs/kit': ^1.5.0
     dependencies:
       '@sveltejs/kit': 1.5.0_svelte@3.55.1+vite@4.1.1
     dev: true
