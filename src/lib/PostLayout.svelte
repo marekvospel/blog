@@ -1,5 +1,6 @@
 <script>
   import NavBar from '$lib/NavBar.svelte'
+  import Footer from "$lib/Footer.svelte";
 
   /** @type string */
   export let title = ''
@@ -72,6 +73,7 @@
     </span>
   {/if}
 </article>
+<Footer />
 
 <style>
 

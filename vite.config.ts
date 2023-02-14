@@ -22,7 +22,9 @@ const config: UserConfig = {
       compiler: 'svelte',
     }),
   ],
-
+  define: {
+    __BUILD_DATE__: JSON.stringify(Date.now())
+  }
 }
 
 export default config

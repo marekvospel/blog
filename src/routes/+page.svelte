@@ -3,6 +3,7 @@
   import NavBar from '$/lib/NavBar.svelte'
   import type { PostData } from '$/types'
   import type { LayoutServerData } from '../../.svelte-kit/types/src/routes/$types'
+  import Footer from '$lib/Footer.svelte'
 
   export let data: LayoutServerData
 
@@ -30,3 +31,4 @@
     <ListPost {...post} />
   {/each}
 </div>
+<Footer />

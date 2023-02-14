@@ -8,3 +8,6 @@ declare namespace App {
      interface Error {}
      interface Platform {} */
 }
+
+// eslint-disable-next-line @typescript-eslint/naming-convention
+declare const __BUILD_DATE__: number
