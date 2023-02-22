@@ -11,7 +11,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.42.1
   '@unocss/reset': ^0.50.0
   '@unocss/transformer-directives': ^0.50.0
-  '@vospel/eslint-config': 1.5.0
+  '@vospel/eslint-config': 1.6.0
   chart.js: ^4.0.0
   eslint: ^8.27.0
   eslint-plugin-svelte3: ^4.0.0
@@ -41,7 +41,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.51.0_4vsywjlpuriuw3tl5oq6zy5a64
   '@unocss/reset': 0.50.0
   '@unocss/transformer-directives': 0.50.0
-  '@vospel/eslint-config': 1.5.0_eslint@8.33.0
+  '@vospel/eslint-config': 1.6.0_eslint@8.33.0
   chart.js: 4.2.0
   eslint: 8.33.0
   eslint-plugin-svelte3: 4.0.0_4omm2ewoudhgnmf7aocafatnc4
@@ -1056,20 +1056,31 @@ packages:
       - rollup
     dev: true
 
-  /@vospel/eslint-config-base/1.5.0_eslint@8.33.0:
-    resolution: {integrity: sha512-SO1WyOnfT4XT9OZ9nKnnipq/l41MSCKKLJdiFpi+2S8DqzM3gXHrMrfvmLAy21MahOyblvisS7AKsr36m8Sm3A==}
+  /@vospel/eslint-config-base/1.6.0_eslint@8.33.0:
+    resolution: {integrity: sha512-MknqCsudLUPj1YVCafvrjOOeFzUN0Ut3RAvUpGGvpkBceCaAvln2Lhb0P1Akyh2h72H+WpRo2tnYw2dX9Ewfbg==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
       eslint: 8.33.0
     dev: true
 
-  /@vospel/eslint-config-svelte/1.5.0_eslint@8.33.0:
-    resolution: {integrity: sha512-s9L/4esjK7wDQxSUdqEXWzcJwhL2Bo+gMh6kDC4KBVqw7kbg38vSCvFLPBdtzN8JJQlLlCZfu5LFi9qKiKPUcw==}
+  /@vospel/eslint-config-json/1.6.0_eslint@8.33.0:
+    resolution: {integrity: sha512-rnkeBi3ICvEMJs0Awdh3RkLwBgk0dUi0sWu4BaI95yTtvMEYbLywk0ctNa6q9kFy0hioOZ/VMcK6mK2fkd980w==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
-      '@vospel/eslint-config-typescript': 1.5.0_eslint@8.33.0
+      '@vospel/eslint-config-base': 1.6.0_eslint@8.33.0
+      eslint: 8.33.0
+      eslint-plugin-jsonc: 2.5.0_eslint@8.33.0
+      jsonc-eslint-parser: 2.1.0
+    dev: true
+
+  /@vospel/eslint-config-svelte/1.6.0_eslint@8.33.0:
+    resolution: {integrity: sha512-Sb8yykpip0a7EKSaQLOszMv8MzUoUkDvyYT44UtXC/bNP4MaNdG/KLsqUlJ9rpjd+ZoIyHYIu8Lq85ljC8dZ4Q==}
+    peerDependencies:
+      eslint: '>=7.4.0'
+    dependencies:
+      '@vospel/eslint-config-typescript': 1.6.0_eslint@8.33.0
       eslint: 8.33.0
       eslint-plugin-svelte: 2.13.0_4omm2ewoudhgnmf7aocafatnc4
       svelte: 3.55.1
@@ -1079,26 +1090,26 @@ packages:
       - ts-node
     dev: true
 
-  /@vospel/eslint-config-typescript/1.5.0_eslint@8.33.0:
-    resolution: {integrity: sha512-FIknH9eilDo2C+g9TZ7YOS9/76gjY53dOLfdasLiZ8vSQISYuI8gwqpB3thuXN3FUSmVYg5ai+uoIu5AInQ5aA==}
+  /@vospel/eslint-config-typescript/1.6.0_eslint@8.33.0:
+    resolution: {integrity: sha512-rO60yCN9gf5VtDHBjZOnXHgspnbT2U1tveixyUEXxg0lckMeT5YoGWbxwsiji3fgJx6qAJKPa0I6BA71PGY2vQ==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
       '@typescript-eslint/eslint-plugin': 5.43.0_ezmentsxyy3b5zs5isxgsfooam
       '@typescript-eslint/parser': 5.43.0_4vsywjlpuriuw3tl5oq6zy5a64
-      '@vospel/eslint-config-base': 1.5.0_eslint@8.33.0
+      '@vospel/eslint-config-base': 1.6.0_eslint@8.33.0
       eslint: 8.33.0
       typescript: 4.9.5
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@vospel/eslint-config-vue/1.5.0_eslint@8.33.0:
-    resolution: {integrity: sha512-64BjXN6M5f6dx9XnwxGeSnfdQDcIjiN7kgDlJUaGiuXvCezbUoC/4LmH9cD+NtIiRq5lDhZUolFSlgyOX4QoEQ==}
+  /@vospel/eslint-config-vue/1.6.0_eslint@8.33.0:
+    resolution: {integrity: sha512-R50gsgllm0WPiZFvstJ3PFExYYg5wX2GaXwcVkHrRnw7mKRq4wCd5DcJiGWtaELgU8ozKQoshGYPqcq/w+KA/Q==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
-      '@vospel/eslint-config-typescript': 1.5.0_eslint@8.33.0
+      '@vospel/eslint-config-typescript': 1.6.0_eslint@8.33.0
       eslint: 8.33.0
       eslint-plugin-vue: 9.7.0_eslint@8.33.0
       vue-eslint-parser: 9.1.0_eslint@8.33.0
@@ -1106,15 +1117,16 @@ packages:
       - supports-color
     dev: true
 
-  /@vospel/eslint-config/1.5.0_eslint@8.33.0:
-    resolution: {integrity: sha512-XYlAg3a9NsyaFVniqVnQpmxzaJdRTTRja05zKhe/8flW0l4+qn5jzInrXITAfk6WL8aKV335RausMyR9b1T+Ag==}
+  /@vospel/eslint-config/1.6.0_eslint@8.33.0:
+    resolution: {integrity: sha512-MqxpeyH9h1yJ1gCRQB/DU7AfnYNxGUhSiQfbsqF2yh4+zw/r0CQ350aM49nSRtEgiLze/7WvBaZvPk+dMPU6qA==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
-      '@vospel/eslint-config-base': 1.5.0_eslint@8.33.0
-      '@vospel/eslint-config-svelte': 1.5.0_eslint@8.33.0
-      '@vospel/eslint-config-typescript': 1.5.0_eslint@8.33.0
-      '@vospel/eslint-config-vue': 1.5.0_eslint@8.33.0
+      '@vospel/eslint-config-base': 1.6.0_eslint@8.33.0
+      '@vospel/eslint-config-json': 1.6.0_eslint@8.33.0
+      '@vospel/eslint-config-svelte': 1.6.0_eslint@8.33.0
+      '@vospel/eslint-config-typescript': 1.6.0_eslint@8.33.0
+      '@vospel/eslint-config-vue': 1.6.0_eslint@8.33.0
       eslint: 8.33.0
     transitivePeerDependencies:
       - supports-color
@@ -1465,6 +1477,18 @@ packages:
   /escape-string-regexp/5.0.0:
     resolution: {integrity: sha512-/veY75JbMK4j1yjvuUxuVsiS/hr/4iHs9FTT6cgTexxdE0Ly/glccBAkloH/DofkjRbZU3bnoj38mOmhkZ0lHw==}
     engines: {node: '>=12'}
+    dev: true
+
+  /eslint-plugin-jsonc/2.5.0_eslint@8.33.0:
+    resolution: {integrity: sha512-G257khwkrOQ5MJpSzz4yQh5K12W4xFZRcHmVlhVFWh2GCLDX+JwHnmkQoUoFDbOieSPBMsPFZDTJScwrXiWlIg==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      eslint: '>=6.0.0'
+    dependencies:
+      eslint: 8.33.0
+      eslint-utils: 3.0.0_eslint@8.33.0
+      jsonc-eslint-parser: 2.1.0
+      natural-compare: 1.4.0
     dev: true
 
   /eslint-plugin-svelte/2.13.0_4omm2ewoudhgnmf7aocafatnc4:
@@ -2015,6 +2039,16 @@ packages:
 
   /json-stable-stringify-without-jsonify/1.0.1:
     resolution: {integrity: sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==}
+    dev: true
+
+  /jsonc-eslint-parser/2.1.0:
+    resolution: {integrity: sha512-qCRJWlbP2v6HbmKW7R3lFbeiVWHo+oMJ0j+MizwvauqnCV/EvtAeEeuCgoc/ErtsuoKgYB8U4Ih8AxJbXoE6/g==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dependencies:
+      acorn: 8.8.2
+      eslint-visitor-keys: 3.3.0
+      espree: 9.4.1
+      semver: 7.3.8
     dev: true
 
   /katex/0.15.6:
