@@ -15,7 +15,7 @@ updated: 2023-01-22 00:30:00
 ---
 # What is HTTP? How does a basic webpage work?
 Thanks to the internet, opening and using a website is really easy, you just open your web browser and with a search
-tool like DuckDuckGo, StartPage or even a paid one like Kagi search you can even search the millions of websites there
+tool like Google, DuckDuckGo, StartPage or even a paid one like Kagi search you can even search the millions of websites there
 are out there. But have you ever wondered how these websites are made?
 
 ## How does a web browser show a website?
