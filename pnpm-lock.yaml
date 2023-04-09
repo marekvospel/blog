@@ -9,7 +9,7 @@ specifiers:
   '@sveltejs/kit': ^1.0.0
   '@typescript-eslint/eslint-plugin': ^5.42.1
   '@typescript-eslint/parser': ^5.42.1
-  '@unocss/reset': ^0.50.0
+  '@unocss/reset': ^0.51.0
   '@unocss/transformer-directives': ^0.50.0
   '@vospel/eslint-config': 1.5.0
   chart.js: ^4.0.0
@@ -39,7 +39,7 @@ devDependencies:
   '@sveltejs/kit': 1.15.0_svelte@3.58.0+vite@4.2.1
   '@typescript-eslint/eslint-plugin': 5.57.0_z24sz2fazj3bxoipp6m4s7b2mi
   '@typescript-eslint/parser': 5.57.0_vwh6htx42aidho2qgfca5u5rwm
-  '@unocss/reset': 0.50.6
+  '@unocss/reset': 0.51.0
   '@unocss/transformer-directives': 0.50.6
   '@vospel/eslint-config': 1.5.0_eslint@8.37.0
   chart.js: 4.2.1
@@ -1013,6 +1013,10 @@ packages:
 
   /@unocss/reset/0.50.6:
     resolution: {integrity: sha512-e1fuSEgp1p7FgpsIZKNejOKgq4gyZcDGDvi+6544x458hInM6MfiMQNP95UBJEG4JZXq6qCZ8t7tRVWS2m5IXg==}
+    dev: true
+
+  /@unocss/reset/0.51.0:
+    resolution: {integrity: sha512-4JPcqWLvhce1LX+t2YAx8dkaFvizbP1Qy/VgpUI8ZmYLCeCifhmAA+N/MYmsg2VpLfkEUBPMhZfPqd7V60vEiw==}
     dev: true
 
   /@unocss/scope/0.50.6:
