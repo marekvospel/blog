@@ -20,7 +20,7 @@
 		"@typescript-eslint/eslint-plugin": "^5.42.1",
 		"@typescript-eslint/parser": "^5.42.1",
 		"@unocss/reset": "^0.51.0",
-		"@unocss/transformer-directives": "^0.50.0",
+		"@unocss/transformer-directives": "^0.51.0",
 		"@vospel/eslint-config": "1.5.0",
 		"chart.js": "^4.0.0",
 		"eslint": "^8.27.0",
