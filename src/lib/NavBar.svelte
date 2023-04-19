@@ -2,6 +2,7 @@
   import MdiGithub from '~icons/mdi/github'
   import MdiMastodon from '~icons/mdi/mastodon'
   import MdiTwitter from '~icons/mdi/twitter'
+  import CibMatrix from '~icons/cib/matrix'
 </script>
 
 <div class="flex flex-row py-2 lg-px4">
@@ -14,6 +15,9 @@
     <br />
     <a href="https://github.com/marekvospel" target="_blank" rel="noopener noreferrer me" class="text-2xl group">
       <MdiGithub class="text-gray-500 hover:text-cyan-400 group-focus:text-cyan-400 transition-color duration-300"/>
+    </a>
+    <a href="https://matrix.to/#/@marek:vospel.cz" target="_blank" rel="noopener noreferrer me" class="text-2xl group">
+      <CibMatrix class="w-[90%] aspect-square text-gray-500 hover:text-cyan-400 group-focus:text-cyan-400 transition-color duration-300"/>
     </a>
     <a href="https://cyberplace.social/@vospel" target="_blank" rel="noopener noreferrer me" class="text-2xl group">
       <MdiMastodon class="text-gray-500 hover:text-cyan-400 group-focus:text-cyan-400 transition-color duration-300"/>
