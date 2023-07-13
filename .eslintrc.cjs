@@ -5,7 +5,7 @@ module.exports = {
     browser: true,
   },
   extends: [
-    '@vospel',
+    '@antfu',
   ],
   rules: { 'no-inner-declarations': ['off'] },
 }
