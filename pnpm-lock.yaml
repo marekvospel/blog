@@ -33,8 +33,8 @@ devDependencies:
     specifier: ^0.51.13
     version: 0.51.13
   '@unocss/transformer-directives':
-    specifier: ^0.51.13
-    version: 0.51.13
+    specifier: ^0.55.0
+    version: 0.55.0
   chart.js:
     specifier: ^4.3.0
     version: 4.3.0
@@ -968,6 +968,10 @@ packages:
     resolution: {integrity: sha512-SclWkqY2c+p5+PiqrbQkhJNEExPdeo71/aGFye10tpBkgPJWd5xC7dhg5F8M4VPNBtuNCrvBWyqNnunMyuz/WQ==}
     dev: true
 
+  /@unocss/core@0.55.0:
+    resolution: {integrity: sha512-TcTugpuhsv6OwMsP3iFIG8FVc9N5JzkojIGNAKF8I2WBftZ//3QcpEHiHc1mH3MlPYfJgUvCcT6/Gad55qmHzg==}
+    dev: true
+
   /@unocss/extractor-arbitrary-variants@0.51.13:
     resolution: {integrity: sha512-lF7p0ea/MeNf4IsjzNhRNYP8u+f1h5JjhTzcvFpQo/vpBvuM5ZCyqp4mkXxYnLNLFfTLsc+MxXaU34IXxpw1QA==}
     dependencies:
@@ -1083,6 +1087,13 @@ packages:
     resolution: {integrity: sha512-1tl8UcVpqYaKkj1zan/QmUAslEcHe9WdN0/QX3Ao663A5r91EwWhnhwKFfvujrZp1XlFnXgKLmKS8OwTRQfCQg==}
     dependencies:
       '@unocss/core': 0.51.13
+      css-tree: 2.3.1
+    dev: true
+
+  /@unocss/transformer-directives@0.55.0:
+    resolution: {integrity: sha512-bWfAOqQxzy5vIul/jgXN2b0APAk9tWKeTN9Rh4FWvz+dI0P7cBc3rHVEC5qM3i9xwYObtjQcNZjEfJpyeapnzg==}
+    dependencies:
+      '@unocss/core': 0.55.0
       css-tree: 2.3.1
     dev: true
 
@@ -1704,7 +1715,7 @@ packages:
     dependencies:
       debug: 3.2.7
       is-core-module: 2.12.1
-      resolve: 1.22.2
+      resolve: 1.22.3
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -3279,7 +3290,7 @@ packages:
     resolution: {integrity: sha512-/5CMN3T0R4XTj4DcGaexo+roZSdSFW/0AOOTROrjxzCG1wrWXEsGbRKevjlIL+ZDE4sZlJr5ED4YW0yqmkK+eA==}
     dependencies:
       hosted-git-info: 2.8.9
-      resolve: 1.22.2
+      resolve: 1.22.3
       semver: 5.7.2
       validate-npm-package-license: 3.0.4
     dev: true
