@@ -20,11 +20,5 @@
       "matchPackageNames": ["remark-math"],
       "enabled": false
     }
-  ],
-  "lockFileMaintenance": {
-    "enabled": true,
-    "automerge": true,
-    "automergeType": "branch",
-    "schedule": ["on the first day of the month"]
-  }
+  ]
 }
