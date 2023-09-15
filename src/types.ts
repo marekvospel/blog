@@ -1,9 +1,7 @@
-
 export interface Author {
   link?: string
   name?: string
 }
-
 
 export interface PostData {
   title: string | undefined

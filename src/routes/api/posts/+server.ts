@@ -12,15 +12,16 @@ export const GET: RequestHandler = async () => {
     Object.entries(allPostFiles).map(async ([path, resolver]) => {
       const { metadata } = await resolver() as any
       let postPath = path.slice(11, -3)
-      if (postPath.endsWith('+page')) postPath = postPath.slice(0, -6)
+      if (postPath.endsWith('+page'))
+        postPath = postPath.slice(0, -6)
       return {
         ...metadata,
         path: postPath,
       }
-    })
+    }),
   )
 
-  allPosts.sort((a: any, b: any) => new Date(b?.created ?? Infinity).getTime() - new Date(a?.created ?? 0).getTime())
+  allPosts.sort((a: any, b: any) => new Date(b?.created ?? Number.POSITIVE_INFINITY).getTime() - new Date(a?.created ?? 0).getTime())
 
   return json(allPosts)
 }

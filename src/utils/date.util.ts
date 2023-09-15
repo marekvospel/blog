@@ -15,9 +15,9 @@ export function formatTimeAgo(date: string | number): string | undefined {
 
   for (let i = 0; i <= DIVISIONS.length; i++) {
     const division = DIVISIONS[i]
-    if (Math.abs(duration) < division.amount) {
+    if (Math.abs(duration) < division.amount)
       return formatter.format(duration > 0 ? Math.floor(duration) : Math.ceil(duration), division.name as any)
-    }
+
     duration /= division.amount
   }
 }
