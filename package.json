@@ -28,7 +28,7 @@
     "eslint": "^8.44.0",
     "eslint-plugin-svelte3": "^4.0.0",
     "katex": "^0.16.8",
-    "mdsvex": "^0.10.6",
+    "mdsvex": "^0.11.0",
     "prism-themes": "^1.9.0",
     "rehype-katex-svelte": "^1.2.0",
     "remark-gfm": "^3.0.1",
