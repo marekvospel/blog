@@ -14,8 +14,7 @@
     },
     {
       "matchPackageNames": ["pnpm"],
-      "automergeType": "branch",
-      "automerge": true
+      "enabled": false
     },
     {
       "matchPackageNames": ["remark-math"],
