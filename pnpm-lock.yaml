@@ -48,8 +48,8 @@ devDependencies:
     specifier: ^0.16.8
     version: 0.16.8
   mdsvex:
-    specifier: ^0.11.0
-    version: 0.11.0(svelte@3.59.2)
+    specifier: ^0.12.0
+    version: 0.12.0(svelte@3.59.2)
   prism-themes:
     specifier: ^1.9.0
     version: 1.9.0
@@ -1176,7 +1176,7 @@ packages:
   /@types/mdast@4.0.0:
     resolution: {integrity: sha512-YLeG8CujC9adtj/kuDzq1N4tCDYKoZ5l/bnjq8d74+t/3q/tHquJOJKUQXJrLCflOHpKjXgcI/a929gpmLOEng==}
     dependencies:
-      '@types/unist': 2.0.7
+      '@types/unist': 3.0.0
     dev: true
 
   /@types/ms@0.7.31:
@@ -3275,10 +3275,10 @@ packages:
     resolution: {integrity: sha512-GaqWWShW4kv/G9IEucWScBx9G1/vsFZZJUO+tD26M8J8z3Kw5RDQjaoZe03YAClgeS/SWPOcb4nkFBTEi5DUEA==}
     dev: true
 
-  /mdsvex@0.11.0(svelte@3.59.2):
-    resolution: {integrity: sha512-gJF1s0N2nCmdxcKn8HDn0LKrN8poStqAicp6bBcsKFd/zkUBGLP5e7vnxu+g0pjBbDFOscUyI1mtHz+YK2TCDw==}
+  /mdsvex@0.12.0(svelte@3.59.2):
+    resolution: {integrity: sha512-B8QtPpNb/TpTW9uB9MafU59JPfboc4IOxmihTwUrQ07oKNODuXeAvahVohNEr+DLAJfbbI6DNXZglKZVDvuCDw==}
     peerDependencies:
-      svelte: '>=3 <5'
+      svelte: ^3.56.0 || ^4.0.0 || ^5.0.0-next.120
     dependencies:
       '@types/unist': 2.0.7
       prism-svelte: 0.4.7
